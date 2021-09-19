@@ -1,0 +1,41 @@
+@startuml "GUI Class Diagram"
+
+class Character {
+    name : str
+    hp : int
+    attack : int
+    speed : int
+    money : int
+    armour : Item
+    weapon : Item
+    inventory : list<Item>
+    badge_count : int
+    improve(stat)
+}
+
+class Item {
+    name: str
+    value : int
+}
+
+class Armour {
+    hp : int
+}
+
+class Weapon {
+    attack : int
+}
+
+class Location {
+    name : str
+    image : int
+    riddle : str
+    answer : str
+    description : str
+    discovered : bool
+}
+
+Item <|-- Weapon
+Item <|-- Armour
+
+@enduml
